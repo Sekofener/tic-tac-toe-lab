@@ -1,20 +1,7 @@
 /*-------------------------------- Constants --------------------------------*/
-const COLOR_LOOKUP = {
-    '1': 'pink',
-    '-1': 'green',
-    'null': 'white'
-  };
-  const winningCombos = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-  ];
-
+const squareEls = document.querySelectorAll('.sqr');
+const messageEl = document.querySelector('#message');
+console.dir(squareEls)
 
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner ,tie;
@@ -22,31 +9,59 @@ let board, turn, winner ,tie;
 
 
 /*------------------------ Cached Element References ------------------------*/
-const squareEls = document.querySelectorAll('.sqr');
-const squareEls = document.querySelector('#message');
-console.dir(squareEls)
+// const squareEls = document.querySelectorAll('.sqr');
+// const squareEls = document.querySelector('#message');
+// console.dir(squareEls)
 
 
 
 /*-------------------------------- Functions --------------------------------*/
-// const init = () =>{
-//     board = ["" ,"", "", "", "", "", "", "", "", ]
-//     turn = 'x'
-//     winner = false;
-//     tie = false;
-        render();
+function init() =>{
+    console.log(init)
+
+const board = [
+    [0, 1, 2], 
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+]
+board = ["" ,"", "", "", "", "", "", "", "", ]
+turn = 'X'
+winner = false;
+tie = false;
+render()
+}
+
+
+function render(){
+
+}
+function updateBoard(){
+    updateBoard.forEach(squareEls => {
+        console.log(squareEls)
+    });
+}
+function updateMessage(){
+    
+}
+
+
+
+
+// const  render = () =>{
+
 // }
 
-const  render = () =>{
+// const updateBoard = () =>{
+//     squareEls.textContent = 'x'
+// }
+// updateBoard();
 
-}
-
-const updateBoard = () =>{
-    squareEls.textContent = 'x'
-}
-updateBoard();
-
-Infinity();
+// Init();
 
 /*----------------------------- Event Listeners -----------------------------*/
 
