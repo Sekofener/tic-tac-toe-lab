@@ -18,7 +18,7 @@ let board, turn, winner ,tie;
 /*-------------------------------- Functions --------------------------------*/
 function init() =>{
     console.log(init)
-
+}
 const board = [
     [0, 1, 2], 
     [3, 4, 5],
@@ -34,7 +34,7 @@ turn = 'X'
 winner = false;
 tie = false;
 render()
-}
+
 
 
 function render(){
@@ -46,7 +46,7 @@ function updateBoard(){
     });
 }
 function updateMessage(){
-    
+
 }
 
 
