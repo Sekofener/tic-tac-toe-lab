@@ -2,7 +2,7 @@
 
 let board;
 let turn;
-let winner;
+let winner = false;
 let tie;
 
 const winningCombos = [
@@ -45,16 +45,23 @@ function checkForWinner() {
   }
 }
 
-function placePiece(index) {
+ const placePiece = (index) =>{
   squareEls[index].innerHTML = turn;
   board[index] = turn;
   console.log(board);
 }
 
-function checkForTie() {
-  if (checkForWinner()) return;
-  console.log(winner);
-}
+  const checkForTie = () => {
+   if (winner === true){
+    return
+   }  else if(board.includes('')){
+    return
+   } else {
+    tie = true;
+    console.log('tie');
+   }
+   }
+  
 
 // function switchPlayerTurn(){
 // if (winner === false && tie === false) {
@@ -112,8 +119,8 @@ function render() {
 function init() {
   board = ["", "", "", "", "", "", "", "", ""];
   turn = "X";
-  winner = "false";
-  tie = "false";
+  winner = false;
+  tie = false;
   render();
 }
 
